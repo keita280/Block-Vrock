@@ -1,0 +1,220 @@
+// _cmn.scssを読み込む
+@import "cmn";
+
+// @@@@@@@@@@@@@
+// ヘッダー
+// @@@@@@@@@@@@@
+header {
+  width: 100%;
+  padding: 14px 16px;
+  box-shadow: 0px 0px 14px 0px #cedfea;
+  background-color: #ffffff;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  width: 143px;
+  height: 53px;
+}
+.header__nav > ul {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav-link {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $pink;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+}
+
+.header__nav-link:not(:last-of-type) {
+  margin-right: 22px;
+}
+
+.header__right__buttons > a:first-child {
+  margin-right: 16px;
+}
+
+.login {
+  background-color: $pink;
+}
+
+.header__right__buttons {
+  display: flex;
+  align-items: center;
+}
+
+// ヘッダーのCTAミニボタン
+.cta-min {
+  display: inline-block;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  background-color: $pink;
+  color: #ffffff;
+  line-height: 1.471;
+  width: 145px;
+  height: 51px;
+  transition: all 0.3s ease;
+}
+
+.cta-min:hover {
+  // background-color: #0062cc;
+  // color: #ffffff;
+  opacity: 0.6;
+}
+
+.cta-min:active {
+  // background-color: #005cbf;
+  // color: #ffffff;
+  opacity: 0.6;
+}
+
+.contact-min {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: white;
+  color: $pink;
+  border: 1px solid $pink;
+  line-height: 1.467;
+  width: 220px;
+  height: 51px;
+  transition: all 0.3s ease;
+  span {
+    font-size: 12px;
+  }
+}
+
+.contact-min:hover {
+  // background-color: #0062cc;
+  // color: #ffffff;
+  opacity: 0.6;
+}
+
+.contact-min:active {
+  // background-color: #005cbf;
+  // color: #ffffff;
+  opacity: 0.6;
+}
+
+// @@@@@@@@@@@@@
+// メインビジュアル
+// @@@@@@@@@@@@@
+.main__inner {
+  display: flex;
+  padding-bottom: 50px;
+}
+.main__body {
+  flex: 0 1 40.18%;
+  margin-top: 103px;
+}
+.mv__lead {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.458;
+  span {
+    color: $pink;
+  }
+}
+.mv__ttl {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 1.458;
+  span {
+    color: $pink;
+  }
+}
+
+.main__img {
+  flex: 0 1 58.6%;
+}
+
+.mv__button {
+  margin-top: 44px;
+}
+
+// @@@@@@@@@@@@@
+// 特徴
+// @@@@@@@@@@@@@
+.feature {
+  padding: 70px 0;
+  background-color: #f2ffff;
+}
+.feature__ttl {
+  font-weight: 900;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 28px;
+  span {
+    color: $pink;
+  }
+}
+
+.feature__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature__card {
+  flex: 0 1 30.88%;
+  background-color: #ffffff;
+  border: 1px solid #a6d3d3;
+  padding: 20px 24px;
+  min-height: 273px;
+  border-radius: 10px;
+}
+
+.feature__card-body {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature__number {
+  font-size: 22px;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.feature__icon {
+  width: 51.66px;
+  height: 44px;
+  margin-bottom: 10px;
+}
+
+.feature__body-ttl {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.4615;
+  margin-bottom: 10px;
+}
+
+.feature__body-text {
+  font-size: 14px;
+  line-height: 1.428;
+  text-align-last: left;
+}

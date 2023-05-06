@@ -1,0 +1,130 @@
+// ＠＠＠＠＠＠＠＠＠
+// 基本記述
+// ＠＠＠＠＠＠＠＠＠
+@charset "utf-8";
+
+// ＠＠＠＠＠＠＠＠＠
+// レスポンシブ記述
+// ＠＠＠＠＠＠＠＠＠
+
+//マップ型変数breakpointsを定義
+$breakpoints: (
+  //キー  値
+  "sp": "(max-width: 980px)",
+  //980px以下用の表示
+  "md": "(min-width: 981px)",
+  //981px以上用の表示
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォ値はmd
+@mixin mq($breakpoint: md) {
+  //map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
+
+@include mq(sp) {
+  .is-pc {
+    display: none;
+  }
+}
+
+@include mq(md) {
+  .is-sp {
+    display: none;
+  }
+}
+
+// ＠＠＠＠＠＠＠＠＠
+// 共通事項定義
+// ＠＠＠＠＠＠＠＠＠
+
+// colors
+$pink:#E54E6E;
+$font-color-main: #2F3A3A;
+
+* {
+  color: $font-color-main;
+}
+
+a {
+  color: $font-color-main;
+}
+
+// 各種ボタン
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  @include mq("sp") {
+  }
+}
+
+//フォント
+$font-ja: "Noto Sans JP", sans-serif;
+
+body {
+  font-family: $font-ja;
+  font-size: 16px;
+  max-width: 100%;
+  @include mq("sp") {
+    font-size: 16px;
+  }
+}
+
+
+
+
+// ＠＠＠＠＠＠＠＠＠
+// インナー
+// ＠＠＠＠＠＠＠＠
+
+.inner {
+  max-width: 980px;
+  margin: 0 auto;
+  @include mq('sp'){
+    padding: 0 20px;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  overflow: hidden;
+}
+
+
+
+
+
