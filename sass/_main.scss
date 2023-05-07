@@ -13,6 +13,8 @@ header {
 .header__inner {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto; /* 左右中央に寄せる */
+  max-width: 1200px;
 }
 .header__logo {
   width: 143px;
@@ -25,6 +27,8 @@ header {
 
 .header__nav-link {
   position: relative;
+  font-size: 14px;
+  font-weight: 500;
   &::after {
     content: "";
     position: absolute;
@@ -217,4 +221,141 @@ header {
   font-size: 14px;
   line-height: 1.428;
   text-align-last: left;
+}
+
+// @@@@@@@@@@@@@
+// arとvr
+// @@@@@@@@@@@@@
+
+.vr {
+  background-color: #fff;
+  padding: 100px 0;
+}
+.vr-container {
+}
+.vr__top {
+  display: flex;
+  margin-bottom: 29px;
+}
+
+.vr__top-ttl {
+  margin-right: 65px;
+}
+
+
+.vr__top-body {
+  width: 71.53%;
+}
+
+
+.vr__top-img {
+  margin-bottom: 14px;
+}
+
+
+.vr__top-txt {
+  font-weight: 700;
+  line-height: 1.4375;
+}
+
+
+.vt__bottom {
+  display: flex;
+}
+
+
+.vt__bottom-body {
+  width: 48.16%;
+  margin-right: 36px;
+}
+
+
+.vt__bottom__img {
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+
+.vr__bottom__txt {
+  font-weight: 700;
+  line-height: 1.4375;
+}
+
+
+// @@@@@@@@@@@@@
+// 熱中が溢れる教室作り
+// @@@@@@@@@@@@@
+
+
+
+.enthusiastic{
+  background-color: #F2FFFF;
+  padding: 100px 0;
+}
+.enthusiastic__container{
+  display: flex;
+}
+.enthusiastic__body{
+  width: 77.24%;
+  margin-right: 89px;
+}
+.enthusiastic__card{
+  display: flex;
+  & + & {
+    margin-top: 70px;
+  }
+}
+.enthusiastic__description{
+  flex: 0 1 47%;
+  margin-right: 36px;
+  padding-top: 19px;
+
+}
+.enthusiastic__description-ttl{
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.462;
+  margin-bottom: 16px;
+}
+.enthusiastic__description-txt{
+  font-size: 14px;
+  line-height: 1.758;
+}
+.enthusiastic__img{
+  flex: 0 1 47.4%;
+}
+
+
+
+
+
+// @@@@@@@@@@@@@
+// 授業もイベントもダイナミックに
+// @@@@@@@@@@@@@
+
+
+.dynamic{
+  padding: 100px 0;
+}
+.dynamic__container{
+  display: flex;
+}
+.dynamic__ttl{
+  margin-right: 80px;
+}
+.dynamic__body{
+  flex: 0 1 78.163%;
+}
+.dynamic__card{
+  & + & {
+    margin-top: 70px;
+  }
+}
+.dynamic__img{
+}
+.dynamic__description{
+}
+.dynamic__description-ttl{
+}
+.dynamic__description-txt{
 }

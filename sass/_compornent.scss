@@ -1,7 +1,6 @@
 // _cmn.scssを読み込む
 @import "cmn";
 
-
 // cta__button
 .cta__button {
   display: inline-block;
@@ -25,4 +24,57 @@
     // color: #ffffff;
     opacity: 0.6;
   }
+}
+
+// 縦書きのタイトル
+.vertical-ttl {
+  display: inline-block;
+  writing-mode: vertical-rl;
+  font-size: 56px;
+  line-height: 1.4;
+  text-orientation: upright; /* すべて縦方向に表示 */
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.vertical-ttl span {
+  color: $pink;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 60px;
+  /* または107% */
+  text-align: center;
+  font-feature-settings: "vert" on;
+}
+
+// 共通のレイアウトのカード
+.cmn__card-body {
+  flex: 0 1 78.163%;
+}
+
+.cmn__card {
+  display: flex;
+  align-items: center;
+}
+
+.cmn__card-img {
+  flex: 1 0 44.38%;
+  margin-right: 36px;
+  min-height: 234px;
+}
+
+.cmn__description {
+}
+
+.cmn__description-ttl {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.461;
+  margin-bottom: 16px;
+}
+
+.cmn__description-txt {
+  font-weight: 400;
+font-size: 14px;
+line-height: 1.857;
 }
