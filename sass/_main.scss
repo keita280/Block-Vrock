@@ -351,11 +351,113 @@ header {
     margin-top: 70px;
   }
 }
-.dynamic__img{
-}
-.dynamic__description{
-}
-.dynamic__description-ttl{
-}
-.dynamic__description-txt{
-}
+
+
+
+  // @@@@@@@@@@@@@
+  // ユーザーの声
+  // @@@@@@@@@@@@@
+
+
+  .voice{
+  position: relative;
+  }
+
+  .voice__container{
+    display: flex;
+  }
+  .voice__body{
+    width: 80%;
+    background: url(../img/voice-bg.png) no-repeat center center / cover;
+    padding: 102px 0 100px 0;
+  }
+
+  .voice__card {
+    background-color: #fff;
+    padding: 18px 22px;
+    display: inline-block;
+    font-weight: 900;
+  }
+  .voice__body-container {
+    position: relative;
+  }
+
+  .voice__card1{
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+  }
+
+  .voice__card2{
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+  }
+
+  .voice__card3{
+    border-radius: 10px 10px 10px 0;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+  }
+  .voice__card4{
+    border-radius: 10px 0 10px 10px;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+  }
+  .voice__card5{
+    border-radius: 10px 10px 10px 0;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+  }
+
+  .voice__card6{
+    border-radius: 10px 10px 10px 0;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+  }
+  .voice__card7{
+    border-radius: 10px 0 10px 10px;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+  }
+  .voice__card8{
+    border-radius: 0 10px 10px 10px;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+  }
+
+  .voice__card9{
+    border-radius: 0 10px 10px 10px;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+  }
+
+
+  .voice__txt__xs{
+    font-size: 13px;
+  }
+  .voice__txt__s{
+    font-size: 14px;
+  }
+  .voice__txt__m{
+    font-size: 18px;
+  }
+  .voice__txt__l{
+    font-size: 19px;
+  }
+
+  .voice__txt__xl{
+    font-size: 23px;
+  }
+  .voice__ttl{
+    margin-top: -50px;
+  }
