@@ -557,7 +557,7 @@ header {
 .voice__body {
   width: 80%;
   background: url(../img/voice-bg.png) no-repeat center center/cover;
-  padding: 102px 0 100px 0;
+  padding: 102px 89.5px 100px 150px;
 }
 
 .voice__card {
@@ -574,63 +574,63 @@ header {
 .voice__card1 {
   border-radius: 10px 0 0 10px;
   position: absolute;
-  top: 100px;
-  left: 0px;
+  top: 90px;
+  left: 20px;
 }
 
 .voice__card2 {
   border-radius: 10px 10px 0 0;
   position: absolute;
-  top: 100px;
-  left: 0px;
+  top: 10px;
+  left: 240px;
 }
 
 .voice__card3 {
   border-radius: 10px 10px 10px 0;
   position: absolute;
-  top: 100px;
-  left: 0px;
+  top: 0px;
+  right: 30px;
 }
 
 .voice__card4 {
   border-radius: 10px 0 10px 10px;
   position: absolute;
-  top: 100px;
+  top: 0px;
   left: 0px;
 }
 
 .voice__card5 {
   border-radius: 10px 10px 10px 0;
   position: absolute;
-  top: 100px;
+  top: 0px;
   left: 0px;
 }
 
 .voice__card6 {
   border-radius: 10px 10px 10px 0;
   position: absolute;
-  top: 100px;
+  top: 0px;
   left: 0px;
 }
 
 .voice__card7 {
   border-radius: 10px 0 10px 10px;
   position: absolute;
-  top: 100px;
+  top: 0px;
   left: 0px;
 }
 
 .voice__card8 {
   border-radius: 0 10px 10px 10px;
   position: absolute;
-  top: 100px;
+  top: 0px;
   left: 0px;
 }
 
 .voice__card9 {
   border-radius: 0 10px 10px 10px;
   position: absolute;
-  top: 100px;
+  top: 0px;
   left: 0px;
 }
 
