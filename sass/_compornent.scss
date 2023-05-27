@@ -1,5 +1,5 @@
 // _cmn.scssを読み込む
-@import "cmn";
+@use "cmn";
 
 // cta__button
 .cta__button {
@@ -9,58 +9,78 @@
   text-align: center;
   text-decoration: none;
   padding: 18px 34px;
-  border-radius: 4px;
-  background-color: $pink;
+  background-color: cmn.$pink;
   color: #ffffff;
   line-height: 1.461;
   transition: all 0.3s ease;
   &:hover {
-    // background-color: #0062cc;
-    // color: #ffffff;
     opacity: 0.6;
   }
   &:active {
-    // background-color: #005cbf;
-    // color: #ffffff;
     opacity: 0.6;
+  }
+  @include cmn.mq('sp'){
+    font-size: 23px;
+    display: block;
+    max-width: 327px;
+    margin-left: auto;
+    margin-right: auto;
+
   }
 }
 
 // 縦書きのタイトル
 .vertical-ttl {
-  display: inline-block;
-  writing-mode: vertical-rl;
+  @include cmn.mq('md'){
+    writing-mode: vertical-rl
+  }
+  // display: inline-block;
+  align-self: flex-start;
   font-size: 56px;
   line-height: 1.4;
   text-orientation: upright; /* すべて縦方向に表示 */
   font-weight: 900;
   letter-spacing: 2px;
+  @include cmn.mq('sp'){
+    font-size: 36px;
+    line-height: 1.4444;
+  }
 }
 
 .vertical-ttl span {
-  color: $pink;
+  color: cmn.$pink;
   font-weight: 900;
   font-size: 56px;
   line-height: 60px;
   /* または107% */
   text-align: center;
   font-feature-settings: "vert" on;
+  @include cmn.mq('sp'){
+    font-size: 36px;
+    line-height: 1.444;
+  }
 }
 
 // 共通のレイアウトのカード
 .cmn__card-body {
-  flex: 0 1 78.163%;
+  @include cmn.mq('md'){
+    flex: 0 1 78.163%;
+  }
 }
 
 .cmn__card {
-  display: flex;
-  align-items: center;
+  @include cmn.mq('md'){
+    display: flex;
+    align-items: center;
+  }
 }
 
 .cmn__card-img {
-  flex: 1 0 44.38%;
-  margin-right: 36px;
-  min-height: 234px;
+  @include cmn.mq('md'){
+    flex: 1 0 44.38%;
+    margin-right: 36px;
+    min-height: 234px;
+  }
 }
 
 .cmn__description {
@@ -71,6 +91,11 @@
   font-size: 26px;
   line-height: 1.461;
   margin-bottom: 16px;
+  @include cmn.mq('sp'){
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 1.45;
+  }
 }
 
 .cmn__description-txt {
