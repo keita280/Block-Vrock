@@ -2435,3 +2435,187 @@ footer {
     margin-top: 18px;
   }
 }
+
+.page-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #f6f6f6;
+}
+
+.login-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.login-container {
+  width: 499px;
+  padding: 60px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0pxa 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0pxa 10px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+
+.social-button {
+  position: relative;
+  padding-left: 30px;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.social-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+.social-button i {
+  margin-right: 10px;
+  position: absolute;
+  left: 20px;
+}
+
+.facebook-button {
+  background-color: #1977f2;
+}
+
+.google-button {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  color: #1a1a1a;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form label {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #444;
+}
+
+form input {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px;
+  color: white;
+  background-color: #008CBA;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.description {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+.link-container {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.forgot-password,
+.create-account {
+  font-size: 14px;
+  color: #444;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 499px) {
+  .login-container {
+    padding: 20px;
+    width: 90%;
+  }
+  .link-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.password-input-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.password-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-right: 40px;
+}
+
+.toggle-password {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}

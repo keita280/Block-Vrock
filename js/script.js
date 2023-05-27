@@ -42,33 +42,7 @@ jQuery('a[href^="#"]').click(function(){
  });
 
 
-//@@@@@@@@@@@@@@@@@@@@@@@@@
-//モーダルウィンドウ
-//@@@@@@@@@@@@@@@@@@@@@@@@@
-//  $(function(){
-//   // 変数に要素を入れる
-//   var open = $('.modal-open'),
-//     close = $('.modal-close'),
-//     container = $('.modal-container');
 
-//   //開くボタンをクリックしたらモーダルを表示する
-//   open.on('click',function(){ 
-//     container.addClass('active');
-//     return false;
-//   });
-
-//   //閉じるボタンをクリックしたらモーダルを閉じる
-//   close.on('click',function(){  
-//     container.removeClass('active');
-//   });
-
-//   //モーダルの外側をクリックしたらモーダルを閉じる
-//   $(document).on('click',function(e) {
-//     if(!$(e.target).closest('.modal-body').length) {
-//       container.removeClass('active');
-//     }
-//   });
-// });
 
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -101,8 +75,28 @@ $(function(){
   window.addEventListener('DOMContentLoaded', adjustYouTubePlayerSize);
 
 
+});
 
 
 
 
+//@@@@@@@@@@@@@@@@@@@@@@@@@
+// ログイン画面のボタンの表示・非表示
+//@@@@@@@@@@@@@@@@@@@@@@@@@
+
+document.getElementById('toggle-password').addEventListener('click', function () {
+  var passwordInput = document.getElementById('password');
+  var toggleIcon = document.getElementById('toggle-icon');
+
+  if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      // FontAwesome 5用の切り替え
+      toggleIcon.classList.remove('fa-eye-slash');
+      toggleIcon.classList.add('fa-eye');
+  } else {
+      passwordInput.type = "password";
+      // FontAwesome 5用の切り替え
+      toggleIcon.classList.remove('fa-eye');
+      toggleIcon.classList.add('fa-eye-slash');
+  }
 });
