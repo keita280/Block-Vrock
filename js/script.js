@@ -1,19 +1,36 @@
 
-
-
-//@@@@@@@@@@@@@@@@@@@@@@@@@
-// ハンバーガーメニューの開閉
-//@@@@@@@@@@@@@@@@@@@@@@@@@
-
-
-
+//   //@@@@@@@@@@@@@@@@@@@@@@@@@
+// // ページ内リンクのスムーススクロール
+// //@@@@@@@@@@@@@@@@@@@@@@@@@
 $(document).ready(function() {
+  // ページ内リンクのスムーススクロール
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+      event.preventDefault();
+      var offset = target.offset().top;
+      
+      // グローバルメニューを閉じる（クラス名や要素に適宜変更してください）
+      $('.header__toggle').removeClass('active');
+      $('.header__nav').removeClass('active');
+      $('.sp-header__nav').removeClass('is-active');
+      
+      $('html, body').animate({
+        scrollTop: offset
+      }, 800);
+    }
+  });
+
+
+  // //@@@@@@@@@@@@@@@@@@@@@@@@@
+// // ハンバーガーメニューの開閉
+// //@@@@@@@@@@@@@@@@@@@@@@@@@
+
+  // ハンバーガーメニューの開閉
   $('.header__toggle').on('click', function() {
     $(this).toggleClass('active');
     $('.header__nav').toggleClass('active');
     $('.sp-header__nav').toggleClass('is-active');
-
-
   });
 });
 
@@ -21,25 +38,28 @@ $(document).ready(function() {
 //@@@@@@@@@@@@@@@@@@@@@@@@@
 //TO TOP
 //@@@@@@@@@@@@@@@@@@@@@@@@@
-// #から始まるURLがクリックされた時
-jQuery('a[href^="#"]').click(function(){
-  // 移動速度を指定
-  let speed = 300;
-  // hrefで指定された値を取得
-  let id =jQuery(this).attr("href");
-  // idの値が#のみだったらターゲットをhtmlタグにしてトップへ戻るようにする
-  let target = jQuery("#" == id ? "html" : id);
-  // ページのトップを基準にターゲットの位置を取得
-  let position = jQuery(target).offset().top;
-  // ターゲットの位置までスピードの速度で移動
-  jQuery("html, body").animate(
-    {
-      scrollTop: position - $( '#js-header' ).outerHeight()
-    },
-    speed
-  );
+let scrollTimeout; // スクロールイベントハンドラ
+
+$(window).scroll(function(){
+  clearTimeout(scrollTimeout); // タイムアウトイベントをクリア
+  
+  if($(this).scrollTop() > 1000) {
+    $('#scrollTop').fadeIn(); // ボタンを表示
+  } else {
+    $('#scrollTop').fadeOut(); // スクロール位置が1000px未満ならボタンを非表示
+  }
+
+  scrollTimeout = setTimeout(function(){
+    // スクロールが止まったときにボタンを非表示にする
+    $('#scrollTop').fadeOut();
+  }, 2000); // アイドル時間（単位はミリ秒）
+});
+
+// ボタンクリックでスムーズにトップにスクロール
+$('#scrollTop').click(function(){
+  $('html, body').animate({scrollTop : 0},800);
   return false;
- });
+});
 
 
 

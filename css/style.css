@@ -90,6 +90,26 @@ main {
   overflow: hidden;
 }
 
+#scrollTop {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: pink;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+#scrollTop:hover {
+  background-color: gainsboro;
+}
+
 .cta__button {
   display: inline-block;
   font-weight: 900;
@@ -141,6 +161,11 @@ main {
     line-height: 1.4444;
   }
 }
+@media (min-width: 600px) and (max-width: 980px) {
+  .vertical-ttl {
+    font-size: 45px;
+  }
+}
 
 .vertical-ttl span {
   color: #E54E6E;
@@ -156,6 +181,11 @@ main {
   .vertical-ttl span {
     font-size: 36px;
     line-height: 1.444;
+  }
+}
+@media (min-width: 600px) and (max-width: 980px) {
+  .vertical-ttl span {
+    font-size: 45px;
   }
 }
 
@@ -335,6 +365,25 @@ header {
 }
 .contact-min span {
   font-size: 12px;
+}
+@media (max-width: 980px) {
+  .contact-min {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    padding: 0px 22px;
+    border-radius: 4px;
+    background-color: white;
+    line-height: 1.471;
+    width: 270px;
+    height: 66px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -moz-text-align-last: left;
+         text-align-last: left;
+  }
 }
 
 .contact-min:hover {
@@ -1337,7 +1386,7 @@ header {
   display: block;
   background: url(../img/enthusiastic-treatment2.png) no-repeat center center/cover;
   right: -3%;
-  bottom: -15%;
+  bottom: -21%;
   width: 450px;
   height: 327px;
   z-index: -1;
@@ -1589,6 +1638,11 @@ header {
     font-size: 18px;
   }
 }
+@media (min-width: 600px) and (max-width: 980px) {
+  .voice__card1 {
+    left: 30%;
+  }
+}
 
 .voice__card2 {
   border-radius: 10px 10px 0 0;
@@ -1599,7 +1653,7 @@ header {
 @media (max-width: 980px) {
   .voice__card2 {
     top: 0;
-    left: 5%;
+    left: 10%;
     font-size: 15px;
   }
 }
@@ -1635,6 +1689,11 @@ header {
     font-size: 14px;
   }
 }
+@media (min-width: 600px) and (max-width: 980px) {
+  .voice__card4 {
+    right: 11%;
+  }
+}
 
 .voice__card5 {
   border-radius: 10px 10px 10px 0;
@@ -1647,6 +1706,11 @@ header {
     top: 303px;
     left: 2%;
     font-size: 14px;
+  }
+}
+@media (min-width: 600px) and (max-width: 980px) {
+  .voice__card5 {
+    left: 12%;
   }
 }
 
@@ -1675,6 +1739,11 @@ header {
     top: 449px;
     left: 0px;
     font-size: 14px;
+  }
+}
+@media (min-width: 600px) and (max-width: 980px) {
+  .voice__card7 {
+    left: 20%;
   }
 }
 
@@ -1708,6 +1777,11 @@ header {
     left: 10%;
   }
 }
+@media (min-width: 600px) and (max-width: 980px) {
+  .voice__card9 {
+    left: 40%;
+  }
+}
 
 @media (min-width: 981px) {
   .voice__ttl {
@@ -1723,6 +1797,11 @@ header {
     right: 0;
     line-height: 1.444;
     font-size: 36px;
+  }
+}
+@media (min-width: 600px) and (max-width: 980px) {
+  .voice__ttl {
+    font-size: 45px;
   }
 }
 
@@ -2224,8 +2303,8 @@ header {
   right: -10%;
   top: -20%;
   background: url(../img/mv-avatar2.png) no-repeat center center/cover;
-  -webkit-animation: floating2 3s ease-in-out infinite;
-          animation: floating2 3s ease-in-out infinite;
+  -webkit-animation: floating3 3s ease-in-out infinite;
+          animation: floating3 3s ease-in-out infinite;
   z-index: 100;
 }
 @media (max-width: 980px) {
@@ -2237,7 +2316,22 @@ header {
   }
 }
 
-@keyframes floating2 {
+@-webkit-keyframes floating3 {
+  0% {
+    -webkit-transform: rotate(-9.88deg) translateY(0);
+            transform: rotate(-9.88deg) translateY(0);
+  }
+  50% {
+    -webkit-transform: rotate(-9.88deg) translateY(-10px);
+            transform: rotate(-9.88deg) translateY(-10px);
+  }
+  100% {
+    -webkit-transform: rotate(-9.88deg) translateY(0);
+            transform: rotate(-9.88deg) translateY(0);
+  }
+}
+
+@keyframes floating3 {
   0% {
     -webkit-transform: rotate(-9.88deg) translateY(0);
             transform: rotate(-9.88deg) translateY(0);
@@ -2258,8 +2352,8 @@ header {
   left: -10%;
   bottom: -40%;
   background: url(../img/mv-avatar1.png) no-repeat center center/cover;
-  -webkit-animation: floating 4s ease-in-out infinite;
-          animation: floating 4s ease-in-out infinite;
+  -webkit-animation: floating4 4s ease-in-out infinite;
+          animation: floating4 4s ease-in-out infinite;
 }
 @media (max-width: 980px) {
   .cta-avatar1 {
@@ -2270,7 +2364,24 @@ header {
   }
 }
 
-@keyframes floating {
+@-webkit-keyframes floating4 {
+  0% {
+    -webkit-transform: rotate(10.13deg) translateY(0);
+            transform: rotate(10.13deg) translateY(0);
+  }
+  50% {
+    -webkit-transform: rotate(10.13deg) translateY(-10px);
+            transform: rotate(10.13deg) translateY(-10px);
+  }
+  100% {
+    -webkit-transform: rotate(10.13deg) translateY(0);
+            transform: rotate(10.13deg) translateY(0);
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+  }
+}
+
+@keyframes floating4 {
   0% {
     -webkit-transform: rotate(10.13deg) translateY(0);
             transform: rotate(10.13deg) translateY(0);

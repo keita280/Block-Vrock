@@ -7,16 +7,15 @@
 // レスポンシブ記述
 // ＠＠＠＠＠＠＠＠＠
 
-//マップ型変数breakpointsを定義
+
+
+
 $breakpoints: (
-  //キー  値
-  //980px以下用の表示
   "sp": "(max-width: 980px)",
-  //768px以上980px以下用の表示
-  // "tab": "(min-width: 768px) and (max-width: 980px)",
-  //981px以上用の表示
+  "tab": "(min-width: 600px) and (max-width: 980px)", // タブレットサイズを追加
   "md": "(min-width: 981px)",
 ) !default;
+
 
 //メディアクエリ用のmixinを定義。デフォ値はmd
 @mixin mq($breakpoint: md) {
@@ -143,6 +142,26 @@ main {
 }
 
 
+// スクロールトップボタン
+#scrollTop {
+  display: none; 
+  position: fixed; 
+  bottom: 10px; 
+  right: 10px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: pink; 
+  color: white; 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 50%; 
+  font-size: 18px; 
+}
+
+#scrollTop:hover {
+  background-color: gainsboro; 
+}
 
 
 

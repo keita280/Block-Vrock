@@ -106,6 +106,22 @@ header {
   span {
     font-size: 12px;
   }
+
+  @include cmn.mq('sp'){
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    padding: 0px 22px;
+    border-radius: 4px;
+    background-color: white;
+    line-height: 1.471;
+    width: 270px;
+    height: 66px;
+    transition: all 0.3s ease;
+    text-align-last: left;
+  }
 }
 
 .contact-min:hover {
@@ -921,7 +937,7 @@ header {
     background: url(../img/enthusiastic-treatment2.png) no-repeat center center /
       cover;
     right: -3%;
-    bottom: -15%;
+    bottom: -21%;
     width: 450px;
     height: 327px;
     z-index: -1;
@@ -1118,11 +1134,16 @@ header {
   position: absolute;
   top: 90px;
   left: 20px;
+
   @include cmn.mq("sp") {
     top: 120px;
     left: 5%;
     font-size: 15px;
     font-size: 18px;
+  }
+  @include cmn.mq("tab") {
+    // タブレット用のスタイル
+    left: 30%;
   }
 }
 
@@ -1133,9 +1154,10 @@ header {
   left: 240px;
   @include cmn.mq("sp") {
     top: 0;
-    left: 5%;
+    left: 10%;
     font-size: 15px;
   }
+
 }
 
 .voice__card3 {
@@ -1148,6 +1170,7 @@ header {
     right: 10%;
     font-size: 14px;
   }
+
 }
 .voice__card4 {
   border-radius: 10px 0 10px 10px;
@@ -1161,6 +1184,10 @@ header {
     right: 0%;
     font-size: 14px;
   }
+  @include cmn.mq("tab") {
+    // タブレット用のスタイル
+    right: 11%;
+  }
 }
 .voice__card5 {
   border-radius: 10px 10px 10px 0;
@@ -1171,6 +1198,10 @@ header {
     top: 303px;
     left: 2%;
     font-size: 14px;
+  }
+  @include cmn.mq("tab") {
+    // タブレット用のスタイル
+    left: 12%;
   }
 }
 
@@ -1194,6 +1225,10 @@ header {
     top: 449px;
     left: 0px;
     font-size: 14px;
+  }
+  @include cmn.mq("tab") {
+    // タブレット用のスタイル
+    left: 20%;
   }
 }
 .voice__card8 {
@@ -1219,6 +1254,10 @@ header {
     top: 626px;
     left: 10%;
   }
+  @include cmn.mq("tab") {
+    // タブレット用のスタイル
+    left: 40%;
+  }
 }
 
 .voice__ttl {
@@ -1233,6 +1272,10 @@ header {
     right: 0;
     line-height: 1.444;
     font-size: 36px;
+  }
+  @include cmn.mq("tab") {
+    // タブレット用のスタイル
+    font-size: 45px;
   }
 }
 
@@ -1673,7 +1716,7 @@ header {
   right: -10%;
   top:-20%;
   background: url(../img/mv-avatar2.png) no-repeat center center / cover;
-  animation: floating2 3s ease-in-out infinite;
+  animation: floating3 3s ease-in-out infinite;
   z-index: 100;
   @include cmn.mq('sp'){
     width: 55px;
@@ -1683,7 +1726,7 @@ header {
   }
 }
 
-@keyframes floating2 {
+@keyframes floating3 {
   0% {
     transform: rotate(-9.88deg) translateY(0);
   }
@@ -1705,7 +1748,7 @@ header {
   left: -10%;
   bottom: -40%;
   background: url(../img/mv-avatar1.png) no-repeat center center / cover;
-  animation: floating 4s ease-in-out infinite;
+  animation: floating4 4s ease-in-out infinite;
   @include cmn.mq("sp") {
     width: 53px;
     height: 97px;
@@ -1714,7 +1757,7 @@ header {
   }
 }
 
-@keyframes floating {
+@keyframes floating4 {
   0% {
     transform: rotate(10.13deg) translateY(0);
   }
