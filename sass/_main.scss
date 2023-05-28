@@ -771,9 +771,11 @@ header {
 }
 
 .vt__bottom-body {
-  width: 48.16%;
-  & + & {
-    margin-left: 36px;
+  @include cmn.mq('md'){
+    width: 48.16%;
+    & + & {
+      margin-left: 36px;
+    }
   }
   @include cmn.mq("sp") {
     width: 100%;

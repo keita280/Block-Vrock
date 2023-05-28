@@ -126,7 +126,7 @@
             >
           </div>
           <div class="main__video">
-            <video autoplay muted loop id="myVideo">
+            <video autoplay muted loop playsinline id="myVideo">
               <source src="./img/mv.MP4" type="video/mp4" />
               Your browser does not support HTML5 video.
             </video>
@@ -148,7 +148,7 @@
             <div class="sp-mv-avatar2"></div>
           </div>
           <div class="main__video inner">
-            <video autoplay muted loop id="myVideo">
+            <video autoplay muted loop playsinline id="myVideo">
               <source src="./img/mv.MP4" type="video/mp4" />
               Your browser does not support HTML5 video.
             </video>
@@ -166,7 +166,7 @@
       <section class="use inner">
         <div class="use__container inner">
           <h3 class="use__ttl">
-            様々な<span>企業様・教育機関様</span>に<br />導入いただいています
+            様々な<span>企業様・教育機関様</span>に<br class="is-pc">導入いただいています
           </h3>
           <div class="use__list">
             <figure class="use__list-item banner1">
@@ -268,7 +268,7 @@
               <div class="vr__video">
                 <video
                   controls
-                  muted
+                  muted autoplay
                   style="width: 100%; height: auto; object-fit: cover"
                 >
                   <source src="./img/mv.MP4" type="video/mp4" />
@@ -303,7 +303,7 @@
 
       <!-- 体験イメージビデオ１ -->
       <section class="experience-video1">
-        <video controls autoplay muted style="width: 100%; object-fit: cover">
+        <video controls autoplay muted  playsinline style="width: 100%; object-fit: cover">
           <source src="./img/rppplay.MP4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -623,7 +623,7 @@
 
       <!-- 体験イメージビデオ2 -->
       <section class="experience-video">
-        <video controls autoplay muted loop>
+        <video controls autoplay muted playsinline loop>
           <source src="./img/vr-section.MP4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

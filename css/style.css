@@ -1210,11 +1210,13 @@ header {
   }
 }
 
-.vt__bottom-body {
-  width: 48.16%;
-}
-.vt__bottom-body + .vt__bottom-body {
-  margin-left: 36px;
+@media (min-width: 981px) {
+  .vt__bottom-body {
+    width: 48.16%;
+  }
+  .vt__bottom-body + .vt__bottom-body {
+    margin-left: 36px;
+  }
 }
 @media (max-width: 980px) {
   .vt__bottom-body {
